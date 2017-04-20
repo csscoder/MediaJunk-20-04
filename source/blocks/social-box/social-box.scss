@@ -1,0 +1,47 @@
+/* social box */
+/***********************************************/
+.social-box {
+  padding: em(10px);
+  margin-bottom: em(30px);
+}
+
+
+.social-box__note {
+  font-size: em(10px);
+  font-weight: 300;
+  margin-bottom: em(10, 10);
+}
+
+.social-box__top {
+  display: flex;
+  justify-content: space-between;
+  padding: em(5px 0 15px 0);
+}
+.social-box__top-logo {
+  img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: em(120px);
+    max-height: em(24px);
+  }
+}
+
+.social-box__logos {
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: em(94px);
+    margin-right: em(10px);
+  }
+}
+.social-box__top-soc {
+  a {
+    text-decoration: none;
+  }
+  img {
+    display: inline-block;
+    width: em(19px);
+    height: em(24px);
+    margin: 0  0 0 em(6px);
+  }
+}

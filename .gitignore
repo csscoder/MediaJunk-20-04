@@ -1,0 +1,11 @@
+
+/node_modules/
+/source/lint-result/
+/source/img/
+/.idea/
+/.happypack/
+.DS_Store
+yarn.lock
+/.ftpaccess.json
+/source/scss/common/svg-sprite-template.scss
+/npm-debug.log

@@ -1,0 +1,59 @@
+// base imports
+@import "common/mixins/mixin";
+@import "common/normalized";
+
+//***************************************
+// Support
+//***************************************
+.hide {
+  @extend %hide;
+}
+
+.hidden {
+  @extend %hidden;
+}
+
+//***************************************
+// Layout
+//***************************************
+
+
+
+.l-html, .l-body {
+  height: 100%;
+}
+.l-page {
+  overflow-x: hidden;
+  margin: 0 auto;
+  max-width: 650px;
+  position: relative;
+  box-shadow: 0 0 10px 1px rgba(#000, .2);
+
+  @include res(tablet) {
+    font-size: 30px;
+  }
+
+}
+
+.banner {
+  text-decoration: none;
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+
+@import "typograph";
+
+
+// Imports blocks
+//***********************************************
+@import "../blocks/header/header";
+@import "../blocks/top-box/top-box";
+@import "../blocks/list-articles/list-articles";
+@import "../blocks/how-it-works/how-it-works";
+@import "../blocks/social-box/social-box";
+
+@import "ui";
+

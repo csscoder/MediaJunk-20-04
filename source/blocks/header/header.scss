@@ -1,0 +1,118 @@
+/* header */
+/***********************************************/
+.l-html {
+  &.show--menu {
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+
+    .l-body {
+      overflow: hidden;
+      height: 100%;
+    }
+  }
+}
+.l-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.header {
+  display: block;
+  
+  margin: 0 auto;
+}
+
+.header__toggle-menu {
+  width: em(22px);
+  height: em(22px);
+  background-color: blue;
+  position: absolute;
+  right: em(10px);
+  top: em(10px);
+  z-index: 20;
+  cursor: pointer;
+  font-size: em(16);
+  background: url('../img/ico-menu.svg') no-repeat;
+  background-size: contain;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: - em(10px);
+    left: - em(10px);
+    bottom: - em(10px);
+    right: - em(10px);
+  }
+
+  .header.show--menu & {
+    background-image: url('../img/close.svg');
+  }
+}
+
+
+.header-nav {
+  position: absolute;
+  background-color: #000;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding-top: em(50px);
+  height: 100vh;
+
+  display: none;
+  transform: translateX(-100%);
+
+  .header.start--animation & {
+    transform: translateX(0%);
+  }
+
+  .header.show--menu & {
+    transform: translateX(0%);
+  }
+}
+
+.header-nav__list {
+  @extend %ul0;
+  padding: 0 em(16px);
+  text-align: right;
+}
+
+.header-nav__list-item {
+  font-size: em(17px);
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: em(20, 17);
+}
+
+.header-nav__list-link {
+  color: #fff;
+  text-decoration: none;
+  @extend %tr-color;
+  &:hover {
+    color: #489bdc;
+  }
+}
+
+.logo-top {
+  position: absolute;
+  left: em(10px);
+  top: em(10px);
+  z-index: 10;
+  margin: 0;
+  font-size: em(16px);
+}
+.logo-top__link {
+  width: em(119px);
+  height: em(24px);
+  background: url('../img/logo.png') no-repeat;
+  background-size: contain;
+  text-indent: -9999px;
+  white-space: nowrap;
+  display: block;
+}

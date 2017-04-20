@@ -1,0 +1,60 @@
+/* how it works */
+/***********************************************/
+.how-works {
+  border-bottom: 1px solid #ededed;
+}
+.how-works__title {
+  margin: 0;
+  color: #3e3e3e;
+  font-size: em(14px);
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: em(10px 10px, 14);
+  border-bottom: 1px solid #e3e3e3;
+  margin-bottom: em(10px, 14);
+  span {
+    font-weight: 100;
+
+  }
+}
+
+.how-works__row {
+  position: relative;
+  padding: em(0 10px);
+  margin-bottom: em(14);
+  @extend %clearfix;
+}
+
+.how-works__column {
+  lost-column: 1/2 2 em(20px)
+}
+
+.how-works__article-img {
+  height: em(84px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: em(64);
+    max-height: em(64);
+  }
+}
+
+.how-works__article-title  {
+  text-transform: uppercase;
+  text-align: center;
+  color: #3e3e3e;
+  font-size: em(12px);
+  font-weight: 700;
+  padding: 0 20%;
+  line-height: 1.2;
+  margin-bottom: em(10, 12);
+}
+
+.how-works__article-note  {
+  color: #3e3e3e;
+  line-height: 1.2;
+  font-size: em(10px);
+  font-weight: 300;
+}

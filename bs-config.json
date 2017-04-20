@@ -1,0 +1,13 @@
+{
+  "port": 8000,
+  "injectChanges": true,
+  "files": ["./build/**/*.{css,html,js}"],
+  "server": { "baseDir": "./build" },
+  "notify": false,
+  "logFileChanges": true,
+  "logLevel": "silent",
+  "scrollProportionally": false,
+  "logSnippet": false,
+  "logConnections": false,
+  "ghostMode": false
+}

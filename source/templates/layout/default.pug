@@ -1,0 +1,22 @@
+// Default variables
+- var path = '';
+- var layout_class = '';
+block var
+
+doctype html
+html.l-html(lang="+ lang +")
+  head
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    link(href= path + "css/main.css", rel="stylesheet", media="all")
+    block title
+      title NO TITLE!!!
+  body(class="l-body " + layout_class)
+    <!-- page start -->
+    .l-page
+      block content
+    <!-- page finish -->
+    script(src= path + "js/common.js")
+    script(src= path + "js/app.js")
+
