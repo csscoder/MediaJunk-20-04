@@ -18,6 +18,11 @@
   right: 0;
   left: 0;
   z-index: 20;
+
+  &.mod--black {
+    background-color: #000;
+    height: em(44px);
+  }
 }
 
 .header {

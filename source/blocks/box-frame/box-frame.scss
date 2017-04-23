@@ -1,0 +1,25 @@
+/* box-frame */
+/***********************************************/
+.box-frame {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  background-size: cover;
+  align-items: center;
+  margin-top: em(44);
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+    width: 1px;
+  }
+}
+
+.box-frame__iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: block;
+}

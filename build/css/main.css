@@ -193,6 +193,10 @@ b,strong {
 	left: 0;
 	z-index: 20;
 }
+.l-header.mod--black {
+	background-color: #000;
+	height: 2.75em;
+}
 
 .header {
 	display: block;
@@ -673,6 +677,39 @@ b,strong {
 	width: 1.1875em;
 	height: 1.5em;
 	margin: 0 0 0 .375em;
+}
+
+/* box-frame */
+/***********************************************/
+.box-frame {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+	-webkit-flex-wrap: nowrap;
+	    -ms-flex-wrap: nowrap;
+	        flex-wrap: nowrap;
+	background-size: cover;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	        align-items: center;
+	margin-top: 2.75em;
+}
+.box-frame:before {
+	content: "";
+	display: block;
+	padding-top: 100%;
+	width: 1px;
+}
+
+.box-frame__iframe {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	display: block;
 }
 
 @media screen and (min-width: 40.063em) {

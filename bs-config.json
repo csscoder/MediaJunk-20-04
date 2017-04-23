@@ -1,13 +1,14 @@
 {
   "port": 8000,
   "injectChanges": true,
-  "files": ["./build/**/*.{css,html,js}"],
+  "files": ["./build/**/*.{css,html,js,png,jpg,gif}"],
   "server": { "baseDir": "./build" },
   "notify": false,
-  "logFileChanges": true,
-  "logLevel": "silent",
+  "logFileChanges": false,
   "scrollProportionally": false,
   "logSnippet": false,
   "logConnections": false,
-  "ghostMode": false
+  "ghostMode": false,
+  "reloadDelay": 300,
+  "reloadDebounce": 300
 }
