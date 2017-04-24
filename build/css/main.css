@@ -151,7 +151,7 @@ b,strong {
 }
 
 .l-page {
-	overflow-x: hidden;
+	padding-top: 1px;
 	margin: 0 auto;
 	max-width: 650px;
 	position: relative;
@@ -695,7 +695,8 @@ b,strong {
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	        align-items: center;
-	margin-top: 2.75em;
+	margin-top: 2.625em;
+	height: 100%;
 }
 .box-frame:before {
 	content: "";

@@ -6,7 +6,8 @@
   flex-wrap: nowrap;
   background-size: cover;
   align-items: center;
-  margin-top: em(44);
+  margin-top: em(42);
+  height: 100%;
 
   &:before {
     content: '';
