@@ -17,29 +17,62 @@
 // Layout
 //***************************************
 
-
-
 .l-html, .l-body {
   height: 100%;
 }
 .l-page {
   padding-top: 1px;
   margin: 0 auto;
-  max-width: 650px;
+  //max-width: 650px;
   position: relative;
-  box-shadow: 0 0 10px 1px rgba(#000, .2);
+  //box-shadow: 0 0 10px 1px rgba(#000, .2);
 
+  //@include res(tablet) {
+  //  font-size: 22px;
+  //}
+
+}
+
+%container {
   @include res(tablet) {
-    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
   }
+}
 
+.box-layout {
+  @extend %container;
+  @include res(tablet) {
+    lost-flex-container: row;
+  }
+}
+.box-layout__col {
+  @include res(tablet) {
+    lost-column: 1/2 2 60px
+  }
+  &.mod--banner {
+    text-align: center;
+    @include res(tablet) {
+      order: 1;
+      width: 100%;
+      padding: 40px;
+    }
+  }
 }
 
 .banner {
   text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
   img {
     width: 100%;
     vertical-align: top;
+  }
+  @include res(tablet) {
+    max-width: 500px;
   }
 }
 

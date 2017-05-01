@@ -22,13 +22,25 @@
   &.mod--black {
     background-color: #000;
     height: em(44px);
+    @include res(tablet) {
+      height: 68px;
+    }
+  }
+
+  @include res(tablet) {
+    height: 68px;
+    background-color: #000;
+    position: relative;
   }
 }
 
 .header {
   display: block;
-  
-  margin: 0 auto;
+  @extend %container;
+  position: relative;
+  @include res(tablet) {
+    height: 100%;
+  }
 }
 
 .header__toggle-menu {
@@ -43,6 +55,10 @@
   font-size: em(16);
   background: url('../img/ico-menu.svg') no-repeat;
   background-size: contain;
+
+  @include res(tablet) {
+    display: none;
+  }
 
   &:before {
     content: '';
@@ -79,12 +95,33 @@
   .header.show--menu & {
     transform: translateX(0%);
   }
+
+  @include res(tablet) {
+    right: 0;
+    left: auto;
+    height: auto;
+    padding-top: 0;
+    display: block;
+    transform: translateX(0%);
+    top: 0;
+    bottom: 0;
+    font-size: 14px;
+    margin-left: 210px;
+  }
+
 }
 
 .header-nav__list {
   @extend %ul0;
   padding: 0 em(16px);
   text-align: right;
+
+  @include res(tablet) {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 0;
+    height: 100%;
+  }
 }
 
 .header-nav__list-item {
@@ -93,6 +130,12 @@
   color: #fff;
   text-transform: uppercase;
   margin-bottom: em(20, 17);
+  @include res(tablet) {
+    margin: 10px 0 10px 16px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }
 
 .header-nav__list-link {
@@ -111,6 +154,11 @@
   z-index: 10;
   margin: 0;
   font-size: em(16px);
+  @include res(tablet) {
+    font-size: 23px;
+    left: 20px;
+    top: 16px;
+  }
 }
 .logo-top__link {
   width: em(119px);

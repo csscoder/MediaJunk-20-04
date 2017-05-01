@@ -7,12 +7,15 @@ block content
 
   include ../../blocks/header/header
   include ../../blocks/top-box/top-box
-  include ../../blocks/list-articles/list-QUIZZES
 
-  a.banner(href="#3")
-    img(src="img/banner.jpg", alt="img")
-
-  include ../../blocks/list-articles/list-PRIZES
+  .box-layout
+    .box-layout__col
+      include ../../blocks/list-articles/list-QUIZZES
+    .box-layout__col.mod--banner
+      a.banner(href="#3")
+        img(src="img/banner.jpg", alt="img")
+    .box-layout__col
+      include ../../blocks/list-articles/list-PRIZES
   include ../../blocks/how-it-works/how-it-works
   include ../../blocks/social-box/social-box
 

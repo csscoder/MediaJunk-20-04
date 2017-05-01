@@ -1,5 +1,13 @@
 /* articles */
 /***********************************************/
+.articles {
+  @include res(tablet) {
+  }
+  @include res(desktop) {
+    font-size: 25px;
+  }
+}
+
 .articles__title {
   margin: 0;
   color: #3e3e3e;
@@ -31,6 +39,9 @@
 .articles__list {
   @extend %ul0;
   border-bottom: 1px solid #e3e3e3;
+  @include res(tablet) {
+    border-bottom: none;
+  }
 }
 
 .articles__item {
@@ -59,6 +70,11 @@
   padding: em(4px 10px);
   display: flex;
   flex-direction: column;
+
+  @include res(tablet) {
+    padding: 10px 16px;
+    justify-content: space-between;
+  }
 }
 
 .articles__item-title {
@@ -148,4 +164,17 @@
   font-size: em(10px);
   font-weight: 300;
   margin-bottom: em(10px, 10);
+}
+
+.articles.mod--prize {
+  @include res(tablet) {
+    .articles__item {
+      padding-left: 10px;
+    }
+    .articles__item-cover {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+  }
+
 }

@@ -3,6 +3,12 @@
 .social-box {
   padding: em(10px);
   margin-bottom: em(30px);
+
+  @extend %container;
+
+  @include res(tablet) {
+    font-size: 24px;
+  }
 }
 
 
@@ -32,6 +38,10 @@
     vertical-align: middle;
     max-width: em(94px);
     margin-right: em(10px);
+  }
+
+  @include res(tablet) {
+    text-align: center;
   }
 }
 .social-box__top-soc {

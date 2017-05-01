@@ -9,6 +9,10 @@
   margin-top: em(42);
   height: 100%;
 
+  @include res(tablet) {
+    margin-top: 0;
+  }
+
   &:before {
     content: '';
     display: block;

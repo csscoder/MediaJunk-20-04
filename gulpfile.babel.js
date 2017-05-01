@@ -203,7 +203,7 @@ const lost = require('lost');
 let postCSS = [lost, autoprefixer({browsers: config.autoprefixer})];
 
 gulp.task('scss', () => {
-  return gulp.src(config.scss.src)
+  gulp.src(config.scss.src)
   .pipe(gulpif(
     args.dev,
     plumber({

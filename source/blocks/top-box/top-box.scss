@@ -6,12 +6,17 @@
   flex-wrap: nowrap;
   background-size: cover;
   align-items: center;
+  background-position: 50% 50%;
 
   &:before {
     content: '';
     display: block;
     padding-top: 83%;
     width: 1px;
+
+    @include res(tablet) {
+      padding-top: 400px;
+    }
   }
 
   &:after{
@@ -24,6 +29,10 @@
     right: 0;
     bottom: 0;
   }
+
+  @include res(tablet) {
+    font-size: 34px;
+  }
 }
 
 .box-top__inner {
@@ -35,6 +44,9 @@
   position: relative;
   z-index: 2;
   top: em(10px);
+  @include res(tablet) {
+    top: 0;
+  }
 }
 
 .box-top__title {
@@ -43,6 +55,15 @@
   line-height: 1.2;
   margin-bottom: em(8, 17);
   font-size: em(17px);
+
+  @include res(tablet) {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    br {
+      display: none;
+    }
+  }
 }
 
 .box-top__note {
@@ -69,5 +90,9 @@
 
   &:hover {
     background-image: linear-gradient(to bottom, #3f8fd2 0%, #59b1ed 100%);
+  }
+
+  @include res(tablet) {
+    font-size: 21px;
   }
 }
