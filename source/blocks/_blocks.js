@@ -1,8 +1,3 @@
-$(window).on('resize', function () {
-  $('.box-frame').height($(window).height() - $('.l-header').height() );
-});
-$(window).trigger('resize');
-
 var boxHeader = $('.header');
 var boxNavigation = $('.header-nav');
 var htmlBox = $('.l-html');
@@ -18,3 +13,8 @@ $('.js-toggle-menu').click(function() {
 
 console.info('Header init');
 
+
+$(window).on('resize', function () {
+  $('.box-frame').height($(window).height() - $('.l-header').height() );
+});
+$(window).trigger('resize');

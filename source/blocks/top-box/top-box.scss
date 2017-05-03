@@ -1,12 +1,11 @@
 /* box-top */
 /***********************************************/
 .box-top {
+  overflow: hidden;
   position: relative;
   display: flex;
   flex-wrap: nowrap;
-  background-size: cover;
   align-items: center;
-  background-position: 50% 50%;
 
   &:before {
     content: '';
@@ -16,6 +15,9 @@
 
     @include res(tablet) {
       padding-top: 400px;
+    }
+    @include res(xlarge) {
+      padding-top: 38%;
     }
   }
 
@@ -35,6 +37,29 @@
   }
 }
 
+.box-top__fone {
+  background-position: 50% 50%;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &.mod--mobile {
+    @include res(tablet) {
+      display: none;
+    }
+  }
+  &.mod--desktop {
+    display: none;
+    background-position: 50% 0;
+    @include res(tablet) {
+      display: block;
+    }
+  }
+}
+
 .box-top__inner {
   color: #fff;
   padding: em(40px 20px);
@@ -47,6 +72,7 @@
   @include res(tablet) {
     top: 0;
   }
+
 }
 
 .box-top__title {

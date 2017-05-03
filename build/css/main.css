@@ -300,6 +300,7 @@ b,strong {
 /* box-top */
 /***********************************************/
 .box-top {
+	overflow: hidden;
 	position: relative;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -308,12 +309,10 @@ b,strong {
 	-webkit-flex-wrap: nowrap;
 	    -ms-flex-wrap: nowrap;
 	        flex-wrap: nowrap;
-	background-size: cover;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	        align-items: center;
-	background-position: 50% 50%;
 }
 .box-top:before {
 	content: "";
@@ -330,6 +329,20 @@ b,strong {
 	left: 0;
 	right: 0;
 	bottom: 0;
+}
+
+.box-top__fone {
+	background-position: 50% 50%;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.box-top__fone.mod--desktop {
+	display: none;
+	background-position: 50% 0;
 }
 
 .box-top__inner {
@@ -845,6 +858,14 @@ b,strong {
 		font-size: 34px;
 	}
 
+	.box-top__fone.mod--mobile {
+		display: none;
+	}
+
+	.box-top__fone.mod--desktop {
+		display: block;
+	}
+
 	.box-top__inner {
 		top: 0;
 	}
@@ -1008,5 +1029,11 @@ b,strong {
 
 	.how-works__article-box:nth-child(2n + 1) {
 		clear: both;
+	}
+}
+
+@media screen and (min-width: 90.063em) {
+	.box-top:before {
+		padding-top: 38%;
 	}
 }
